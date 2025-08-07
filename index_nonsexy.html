@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Times News - A Vintage Print Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            background-color: #F1E9D4; /* A warmer, aged beige */
+            /* Subtle paper texture */
+            background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+            color: #2C2C2C; /* Softer black */
+        }
+        h1, h2, h3, .font-display {
+            font-family: 'Old Standard TT', serif;
+        }
+        .bg-custom-red { background-color: #B22222; } /* Firebrick red */
+        .text-custom-red { color: #B22222; }
+        .border-custom-red { border-color: #B22222; }
+        .bg-custom-beige { background-color: #F1E9D4; }
+        .text-custom-beige { color: #F1E9D4; }
+        .bg-custom-black { background-color: #2C2C2C; }
+        .text-custom-black { color: #2C2C2C; }
+
+        /* Vintage Button Style */
+        .btn {
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid #2C2C2C;
+            box-shadow: 3px 3px 0px #2C2C2C;
+        }
+        .btn:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px #2C2C2C;
+        }
+        .btn-primary {
+            background-color: #B22222;
+            color: white;
+            border-color: #B22222;
+        }
+        .btn-primary:hover {
+             background-color: #8c1c1c;
+        }
+
+        /* Image Styling */
+        .vintage-img {
+            filter: grayscale(100%) sepia(30%);
+            border: 1px solid #2C2C2C;
+            padding: 8px;
+            background-color: white;
+            box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        /* Divider style */
+        .divider {
+            border-top: 1px solid #2C2C2C;
+            border-bottom: 3px double #2C2C2C;
+            margin: 2rem 0;
+            padding: 2px 0;
+        }
+        .thin-divider {
+            border-top: 1px solid #2C2C2C;
+            margin: 1.5rem 0;
+        }
+
+    </style>
+</head>
+<body class="bg-custom-beige text-custom-black">
+
+    <!-- Header & Navigation -->
+    <header class="bg-custom-beige sticky top-0 z-50 border-b-2 border-custom-black">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-3xl font-display font-bold text-custom-black tracking-wider">The My Times News</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#about" class="hover:text-custom-red">About</a>
+                <a href="#preview" class="hover:text-custom-red">Preview</a>
+                <a href="#subscribe" class="hover:text-custom-red">Subscribe</a>
+                <a href="#contact" class="hover:text-custom-red">Contact</a>
+            </div>
+             <div class="md:hidden">
+                 <button id="menu-btn" class="text-custom-black focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+         <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-custom-black">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-200">About</a>
+            <a href="#preview" class="block py-2 px-4 text-sm hover:bg-gray-200">Preview</a>
+            <a href="#subscribe" class="block py-2 px-4 text-sm hover:bg-gray-200">Subscribe</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-200">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <div class="container mx-auto p-6 md:p-12 bg-white shadow-xl mt-8 border-x-2 border-custom-black">
+
+        <!-- Hero Section -->
+        <main>
+            <div class="text-center mb-4">
+                <h1 class="text-5xl md:text-7xl font-bold font-display">Ditch the Doomscroll.</h1>
+                <p class="text-xl mt-2">A Return to the Tactile Joy of Reading</p>
+            </div>
+            <div class="divider"></div>
+            <div class="grid md:grid-cols-5 gap-8 items-start">
+                <div class="md:col-span-3">
+                    <h2 class="text-3xl font-bold font-display text-custom-red">Your News, Beautifully Printed & Delivered.</h2>
+                    <p class="mt-4 text-lg">
+                        We are a youth-run, independent print publication dedicated to creating customized physical newspapers. In a world saturated with digital noise, we offer a screen-free, vintage-inspired alternative—something you can physically hold, feel, and enjoy.
+                    </p>
+                    <p class="mt-4">
+                        Our mission is to bring back the focused pleasure of reading with short, interest-based articles tailored to you, wrapped in a stylish, nostalgic aesthetic reminiscent of old Hollywood and classic magazines.
+                    </p>
+                    <a href="#subscribe" class="btn btn-primary mt-8 inline-block py-2 px-6">Order Your First Edition</a>
+                </div>
+                <div class="md:col-span-2">
+                    <img src="1.jpeg" alt="A person holding a custom newspaper" class="w-full vintage-img">
+                </div>
+            </div>
+        </main>
+
+        <div class="divider"></div>
+
+        <!-- About Section -->
+        <section id="about" class="py-12">
+            <h2 class="text-4xl font-bold font-display text-center">Print, Personalized.</h2>
+            <div class="thin-divider max-w-xs mx-auto"></div>
+            <div class="grid md:grid-cols-2 gap-12 mt-8 items-center">
+                <div>
+                     <img src="2.jpeg" alt="Vintage printing press" class="w-full vintage-img">
+                </div>
+                <div class="text-lg">
+                    <p>
+                        <span class="font-bold text-custom-red text-2xl float-left mr-3">M</span>y Times News isn't just a product; it's a philosophy. We believe in the power of print to cut through the clutter. Each paper we produce is a collaboration between our design team and your unique interests.
+                    </p>
+                    <p class="mt-4">
+                        From stunning black-and-white visuals to articles on niche topics you love, every edition is a bespoke piece of art designed to be read, re-read, and cherished. We're giving paper a glow-up.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Preview Section -->
+        <section id="preview" class="py-12">
+            <h2 class="text-4xl font-bold font-display text-center">A Glimpse of the Times</h2>
+            <p class="text-center mt-2">Snippets from recent custom editions.</p>
+            <div class="mt-12 grid md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <div class="flex flex-col">
+                    <img src="4.jpeg" alt="Espresso machine" class="w-full vintage-img">
+                    <div class="bg-custom-beige p-4 mt-[-2px]">
+                        <h3 class="text-xl font-bold font-display">The Art of the Espresso Shot</h3>
+                        <p class="mt-2 text-sm">A deep dive into the perfect extraction for coffee lovers.</p>
+                    </div>
+                </div>
+                <!-- Article 2 -->
+                <div class="flex flex-col">
+                    <img src="3.jpeg" alt="Silhouette in a dark alley" class="w-full vintage-img">
+                     <div class="bg-custom-beige p-4 mt-[-2px]">
+                        <h3 class="text-xl font-bold font-display">A Guide to Film Noir</h3>
+                        <p class="mt-2 text-sm">Key themes and must-watch classics for the aspiring cinephile.</p>
+                    </div>
+                </div>
+                <!-- Article 3 -->
+                <div class="flex flex-col">
+                    <img src="My Times News-2.png" alt="Old cinema marquee" class="w-full vintage-img">
+                     <div class="bg-custom-beige p-4 mt-[-2px]">
+                        <h3 class="text-xl font-bold font-display">Lost Cinemas of the 50s</h3>
+                        <p class="mt-2 text-sm">Exploring the architectural ghosts of Hollywood's golden age.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="divider"></div>
+
+        <!-- Subscribe & Contact Section -->
+        <section id="subscribe" class="py-12">
+             <div class="grid md:grid-cols-2 gap-12">
+                <!-- Subscription Plans -->
+                <div>
+                    <h2 class="text-4xl font-bold font-display">Get Your Own Paper</h2>
+                    <p class="mt-2">Choose a plan or order a single edition. Start your journey back to mindful reading today.</p>
+                    <div class="mt-6 space-y-6">
+                        <!-- Single Order -->
+                        <div class="border-2 border-dashed border-gray-400 p-6">
+                            <h3 class="text-2xl font-bold font-display">One-Time Edition - $25</h3>
+                            <p class="mt-2">Perfect for a unique gift or to try the experience. Fully customized to your interests.</p>
+                            <button class="btn bg-custom-black text-white mt-4 py-2 px-4">Order a Single Paper</button>
+                        </div>
+                        <!-- Subscription -->
+                        <div class="border-2 border-custom-red p-6 bg-red-50">
+                            <h3 class="text-2xl font-bold font-display text-custom-red">Monthly Subscription - $20/mo</h3>
+                            <p class="mt-2">The best value. A new, personalized paper delivered to your door every month.</p>
+                            <button class="btn btn-primary mt-4 py-2 px-4">Subscribe Monthly</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Info -->
+                <div id="contact" class="bg-custom-beige p-8 border-2 border-custom-black">
+                     <h2 class="text-4xl font-bold font-display text-center">The News Desk</h2>
+                     <div class="thin-divider max-w-xs mx-auto"></div>
+                     <p class="text-center">Have a question? Want to collaborate? <br/> Send a wire or, preferably, an email.</p>
+                     <div class="mt-6 text-center">
+                        <p class="font-display text-xl">Our Email:</p>
+                        <a href="mailto:hello@mytimes.news" class="text-custom-red text-2xl font-bold underline">hello@mytimes.news</a>
+                     </div>
+                     <div class="mt-6 text-center">
+                        <p class="font-display text-xl">Office Hours:</p>
+                        <p>Mon-Fri, 10am - 4pm</p>
+                     </div>
+                </div>
+             </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 px-6 mt-8">
+        <div class="divider w-full"></div>
+        <p class="font-display">&copy; 2024 The My Times News Co. — All Rights Reserved.</p>
+        <p class="text-sm mt-2">Giving paper a glow-up since 2024.</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
